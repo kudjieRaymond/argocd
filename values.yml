@@ -1,0 +1,19 @@
+server:
+  # ingress:
+  #   # -- Enable an ingress resource for the Argo CD server
+  #   enabled: true
+  #   annotations:
+  #     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  #     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+
+  #   ingressClassName: "nginx"
+  #   hostname: "devops.hobbies"
+
+  #   # -- The path to Argo CD server
+  #   path: /
+
+  #   # -- Ingress path type. One of `Exa
+  service:
+    type: "NodePort"
+    nodePortHttp: 32073
+    nodePortHttps: 32074
